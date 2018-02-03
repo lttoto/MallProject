@@ -1,7 +1,13 @@
 package com.mmall.pojo;
 
+import lombok.*;
+
 import java.util.Date;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
 public class Category {
     private Integer id;
 
@@ -16,7 +22,7 @@ public class Category {
     private Date createTime;
 
     private Date updateTime;
-
+/*
     public Category(Integer id, Integer parentId, String name, Boolean status, Integer sortOrder, Date createTime, Date updateTime) {
         this.id = id;
         this.parentId = parentId;
@@ -85,5 +91,5 @@ public class Category {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
-    }
+    }*/
 }

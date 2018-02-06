@@ -68,3 +68,14 @@ mvn clean package -Dmaven.test.skip=true -Pprod
       </properties>
     </profile>
   </profiles>
+
+
+  *id为表A的主键
+  无锁
+  select * from A where a.id = {id},a为空
+  行锁
+  select * from A where a.id = {id},a不为空
+  表锁
+  select * from A
+  select * from A where a.id <> {id}
+  select * from A where a.id like 'id'
